@@ -14,5 +14,6 @@ app.use(express.urlencoded({
 }))
 // app.get('/api/goals',(req, res)=> res.send('Get goals'))
 app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))// we have api goals going to our goal routes 
 app.use(errorHandler)
 app.listen(port, () => console.log(` server started on port ${port}`)) // which generate the output  
